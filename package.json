@@ -1,0 +1,23 @@
+{
+  "name": "nodebb-plugin-dbsearch-classify-by-categories",
+  "version": "0.1.0",
+  "description": "This module is an add-on to nodebb-plugin-dbsearch, which will give a different layout to display your search result and you can see the count within each directory on the left column",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yeelan0319/nodebb-plugin-dbsearch-classify-by-categories"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodebb",
+    "plugin",
+    "search"
+  ],
+  "author": {
+    "name": "Yiran Mao",
+    "email": "yiranmao@gmail.com"
+  },
+  "license": "BSD-2-Clause"
+}
