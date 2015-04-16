@@ -9,9 +9,12 @@ var _ = require('underscore')._;
 			.map(function(post){
 				post.content = JSON.parse(_.unescape(post.content));
 				if(typeof post.content !== "string"){
-				_.each(post.content, function(content, key){
-					post.content = key + ': ' + content + '<br>';
-				});
+					var content = '';
+					_.each(post.content, function(partial, key){
+						content += key + ': ' + partial + '<br>';
+					});
+					post.content = content;
+				}
 				return post;
 			})
 			.countBy(function(post){ return post.category.name;})
@@ -30,4 +33,3 @@ var _ = require('underscore')._;
 	}
 
 }(module.exports));
-
