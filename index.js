@@ -8,6 +8,10 @@ var _ = require('underscore')._;
 		results.results.resultsInCategoryCount = _.chain(results.results.posts)
 			.map(function(post){
 				post.content = JSON.parse(_.unescape(post.content));
+				if(typeof post.content !== "string"){
+				_.each(post.content, function(content, key){
+					post.content = key + ': ' + content + '<br>';
+				});
 				return post;
 			})
 			.countBy(function(post){ return post.category.name;})
